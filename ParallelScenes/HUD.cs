@@ -18,8 +18,18 @@ namespace ParallelScenes
         public static EventKey NextSceneEventKey = new EventKey("Global", "NextScene");
         public static EventKey PreviousSceneEventKey = new EventKey("Global", "PreviousScene");
         private UIPage page;
+        int clickCount = 0;
+
+        bool created = false;
 
         public override void Start()
+        {
+            if(!created)
+                WireUpHUD();
+            created = true;
+        }
+
+        public void WireUpHUD()
         {
             page = Entity.Get<UIComponent>().Page;
             var rootElement = page.RootElement;
@@ -28,19 +38,34 @@ namespace ParallelScenes
 
             var editBox = rootElement.FindVisualChildOfType<Button>("EditText");
 
-            Log.Debug("Click");
-            nextButton.Click += delegate
+            var incButton = rootElement.FindVisualChildOfType<Button>("IncrementButton");
+            var incButtonText = incButton.FindVisualChildOfType<TextBlock>("IncButtonText");
+
+            if (!created)
             {
-                NextSceneEventKey.Broadcast();
-            };
-            previousButton.Click += delegate
-            {
-                PreviousSceneEventKey.Broadcast();
-            };
+                nextButton.Click += delegate
+                {
+                    NextSceneEventKey.Broadcast();
+                };
+                previousButton.Click += delegate
+                {
+                    PreviousSceneEventKey.Broadcast();
+                };
+
+                incButton.Click += delegate
+                {
+                    clickCount++;
+                    incButtonText.Text = "click: " + clickCount;
+                };
+            }
         }
 
         public override void Update()
         {
+            if(Input.Keyboard.IsKeyReleased(Keys.Left))
+                PreviousSceneEventKey.Broadcast();
+            if (Input.Keyboard.IsKeyReleased(Keys.Right))
+                NextSceneEventKey.Broadcast();
         }
     }
 }

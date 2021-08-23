@@ -6,30 +6,30 @@ ChildrenIds: []
 Offset: {X: 0.0, Y: 0.0, Z: 0.0}
 Hierarchy:
     RootParts:
-        - ref!! 21223d48-cb9e-477c-a792-ea6a1bd996d1
         - ref!! 4d99960b-c454-4791-94d8-f572727c2126
+        - ref!! 03ca3d05-bf73-4094-80c0-9fa88de03ed7
     Parts:
         -   Entity:
-                Id: 21223d48-cb9e-477c-a792-ea6a1bd996d1
+                Id: 03ca3d05-bf73-4094-80c0-9fa88de03ed7
                 Name*: HUD
                 Components:
                     f817ef2570d6743372268508e6c0792b: !TransformComponent
-                        Id: 8088ecb8-5f91-4b4e-897a-dce0e2a50784
+                        Id: b8b5ece5-799e-488f-8eb5-d5e749a1bb92
                         Position: {X: 0.0, Y: 0.0, Z: 0.0}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: {}
                     7f97c803bb9152b95847f5a7f15fb354: !UIComponent
-                        Id: 1d2b4715-2647-429b-8467-d11d2ddfcc9c
+                        Id: 6659e4c2-b553-41c4-9ccc-e51857f46039
                         Page: 0936e0ab-4586-4223-a959-4b2bb1299931:Page
                         Resolution: {X: 1280.0, Y: 720.0, Z: 1000.0}
                         Size: {X: 1.28, Y: 0.72, Z: 1.0}
                     e5b6f9542ffe8847fcad45ba28e174cc: !ParallelScenes.HUD,ParallelScenes
-                        Id: 73849b54-3928-4812-856b-aaa081e4bc80
+                        Id: cf435343-bcc7-4435-95cb-9cd3903c3829
             Base:
                 BasePartAsset: a06c44ba-7853-47bf-85e4-25550fd8cec8:HUD
                 BasePartId: a5b26be5-9233-4e94-bd0e-03fc47044e04
-                InstanceId: 39505b2a-6435-423d-8201-8c23501a7ca4
+                InstanceId: f5e659d6-77a1-4e8b-98a6-35f876e5df05
         -   Entity:
                 Id: 4d99960b-c454-4791-94d8-f572727c2126
                 Name: Camera

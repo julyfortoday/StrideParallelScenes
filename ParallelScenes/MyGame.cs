@@ -45,6 +45,7 @@ namespace ParallelScenes
             CameraEntity = SceneSystem.SceneInstance.RootScene.Entities.First(e => e.Name == "Camera");
             HUDEntity = SceneSystem.SceneInstance.RootScene.Entities.First(e => e.Name == "HUD");
 
+
             instances.Add(new SceneInstance(this.Services, gen.LoadScene("Scene01")) { Name = "Scene01" });
             instances.Add(new SceneInstance(this.Services, gen.LoadScene("Scene02")) { Name = "Scene02" });
 
@@ -133,29 +134,12 @@ namespace ParallelScenes
 
                 SceneSystem.SceneInstance.RootScene.Entities.Add(CameraEntity);
                 SceneSystem.SceneInstance.RootScene.Entities.Add(HUDEntity);
+
             }
             catch (Exception e)
             {
                 Log.Error(e.Message);
             }
         }
-
-
-        // some experimental code for trying to manage the camera/compositors while switching between scenes as well
-        //private void ChangeInstance(int sceneIndex)
-        //{
-        //    WriteLog("scene: " + sceneIndex);
-        //    var instance = instances[sceneIndex];
-
-        //    var rc = RenderContext.GetShared(Services);
-        //    var gc = rc.Tags.Get(GraphicsCompositor.Current);
-        //    if(gc != null)
-        //    {
-        //        for (int i = 0; i < gc.Cameras.Count; i++)
-        //            gc.Cameras[i] = null;
-        //    }
-
-        //    SceneSystem.SceneInstance = instance;
-        //}
     }
 }

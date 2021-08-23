@@ -11,6 +11,7 @@ Hierarchy:
         - ref!! 27c0d583-3582-42f7-ae3b-780c4224b9ef
         - ref!! 78d2875d-3afb-4155-ba90-54f8729839d5
         - ref!! 0d7d2b9d-482b-4cfd-bdee-3f69dec951ab
+        - ref!! e5a661d1-a11b-4d4c-8010-e6fd0025ca8f
     Parts:
         -   Entity:
                 Id: 0d7d2b9d-482b-4cfd-bdee-3f69dec951ab
@@ -26,6 +27,26 @@ Hierarchy:
                         Id: d9a60235-d335-4886-838d-a4ccc7adc937
                         Model: 3d746bce-1c65-404f-b568-b9535b453fd7:Sphere
                         Materials: {}
+                    8ff1a0f394f43feb6e5bb0a6af6124ba: !RigidbodyComponent
+                        Id: 071f243e-b1de-4f54-afbc-fab9474a3303
+                        CanSleep: false
+                        Restitution: 0.0
+                        Friction: 0.5
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        IsKinematic: false
+                        Mass: 1.0
+                        LinearDamping: 0.0
+                        AngularDamping: 0.0
+                        OverrideGravity: false
+                        Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
+                        NodeName: null
+                        ColliderShapes:
+                            b4138ee49e72841a1735c8b2d286348b: !SphereColliderShapeDesc
+                                Is2D: false
+                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
         -   Entity:
                 Id: 27c0d583-3582-42f7-ae3b-780c4224b9ef
                 Name: Ground
@@ -110,5 +131,60 @@ Hierarchy:
                         Id: 3d07bc52-552e-47a1-9c1b-95f8b31584c2
                         Model: e03c6d5b-e1a3-4aa6-a920-554dffa9417e:Box
                         Materials: {}
-                    438969fd053dd75a3beeecf06dcc7607: !ParallelScenes.Rotator,ParallelScenes
-                        Id: adfcaa12-e315-49c3-80c3-de4650bc0182
+                    085351b21cf1051add1a018ec2d16586: !RigidbodyComponent
+                        Id: 7fa4095f-0f4c-4b26-ab23-301f88bab3a8
+                        CanSleep: false
+                        Restitution: 0.0
+                        Friction: 0.5
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        IsKinematic: false
+                        Mass: 1.0
+                        LinearDamping: 0.0
+                        AngularDamping: 0.0
+                        OverrideGravity: false
+                        Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
+                        NodeName: null
+                        ColliderShapes:
+                            2f123071d70852724043885ed3c5bd2e: !BoxColliderShapeDesc
+                                Is2D: false
+                                Size: {X: 1.0, Y: 1.0, Z: 1.0}
+                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
+                                LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+        -   Folder: null
+            Entity:
+                Id: e5a661d1-a11b-4d4c-8010-e6fd0025ca8f
+                Name: Sphere
+                Components:
+                    9b72a542d12f6b3c6399898938dd5873: !TransformComponent
+                        Id: 19d289a2-ca2a-4c23-b05a-18f45760813d
+                        Position: {X: 0.13146065, Y: 2.909688, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    a0627a076d74eab056f321499b4aba4f: !ModelComponent
+                        Id: 6639201e-bb85-47f5-ba35-514d9546e808
+                        Model: 3d746bce-1c65-404f-b568-b9535b453fd7:Sphere
+                        Materials: {}
+                    8ff1a0f394f43feb6e5bb0a6af6124ba: !RigidbodyComponent
+                        Id: 2f026950-ae88-4ed8-9e52-42cc594875c7
+                        CanSleep: false
+                        Restitution: 0.0
+                        Friction: 0.5
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        IsKinematic: false
+                        Mass: 1.0
+                        LinearDamping: 0.0
+                        AngularDamping: 0.0
+                        OverrideGravity: false
+                        Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
+                        NodeName: null
+                        ColliderShapes:
+                            b4138ee49e72841a1735c8b2d286348b: !SphereColliderShapeDesc
+                                Is2D: false
+                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
