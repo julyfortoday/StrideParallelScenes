@@ -1,0 +1,113 @@
+!UIPageAsset
+Id: 0936e0ab-4586-4223-a959-4b2bb1299931
+SerializedVersion: {Stride: 2.1.0.1}
+Tags: []
+Design:
+    Resolution: {X: 1280.0, Y: 720.0, Z: 1000.0}
+Hierarchy:
+    RootParts:
+        - !Grid ref!! cb785849-4bef-4728-a729-292d88fe0c57
+    Parts:
+        -   UIElement: !Button
+                Id: 2c0594ca-581b-413e-8a43-219c7d87c216
+                DependencyProperties: {}
+                BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
+                DrawLayerNumber: 2
+                Width: 239.0
+                Height: 40.0
+                HorizontalAlignment: Left
+                VerticalAlignment: Top
+                Margin: {Left: 297.0, Top: 38.0}
+                Name: NextButton
+                Content: !TextBlock ref!! c54702ab-e02f-4d41-95ac-4ed024ea5917
+                PressedImage: !SpriteFromSheet
+                    Sheet: 1be3340c-b797-4557-bff7-d9be92dfdb42:StrideUIDesigns
+                    CurrentFrame: 2
+                NotPressedImage: !SpriteFromSheet
+                    Sheet: 1be3340c-b797-4557-bff7-d9be92dfdb42:StrideUIDesigns
+                    CurrentFrame: 1
+                MouseOverImage: !SpriteFromSheet
+                    Sheet: 1be3340c-b797-4557-bff7-d9be92dfdb42:StrideUIDesigns
+        -   UIElement: !EditText
+                Id: 3d5ddb66-039a-4b92-9820-763417fbd32e
+                DependencyProperties: {}
+                BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
+                DrawLayerNumber: 5
+                CanBeHitByUser: true
+                Width: 290.0
+                Height: 44.0
+                VerticalAlignment: Top
+                Margin: {Left: 582.0, Top: 34.0, Right: 408.0}
+                Padding: {Left: 8.0, Top: 4.0, Right: 8.0, Bottom: 8.0}
+                Font: c90f3988-0544-4cbe-993f-13af7d9c23c6:StrideDefaultFont
+                TextSize: 20.0
+                TextColor: {R: 240, G: 240, B: 240, A: 255}
+                ActiveImage: !SpriteFromSheet
+                    Sheet: 1be3340c-b797-4557-bff7-d9be92dfdb42:StrideUIDesigns
+                    CurrentFrame: 3
+                InactiveImage: !SpriteFromSheet
+                    Sheet: 1be3340c-b797-4557-bff7-d9be92dfdb42:StrideUIDesigns
+                    CurrentFrame: 4
+                MouseOverImage: !SpriteFromSheet
+                    Sheet: 1be3340c-b797-4557-bff7-d9be92dfdb42:StrideUIDesigns
+                    CurrentFrame: 5
+                CaretColor: {R: 240, G: 240, B: 240, A: 255}
+                CaretWidth: 1.0
+                SelectionColor: {R: 240, G: 240, B: 240, A: 255}
+                IMESelectionColor: {R: 240, G: 255, B: 240, A: 255}
+                CaretFrequency: 1.0
+                Text: Scene Number
+        -   UIElement: !TextBlock
+                Id: 4016d2a7-521d-4bb0-9f85-a6b012773e2b
+                DependencyProperties: {}
+                BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
+                HorizontalAlignment: Center
+                VerticalAlignment: Center
+                Margin: {}
+                Text: Previous Scene
+                Font: c90f3988-0544-4cbe-993f-13af7d9c23c6:StrideDefaultFont
+                TextSize: 20.0
+                TextColor: {R: 240, G: 240, B: 240, A: 255}
+        -   UIElement: !Button
+                Id: 735a8bec-b755-427f-b3b5-266ecd7396eb
+                DependencyProperties: {}
+                BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
+                DrawLayerNumber: 2
+                Width: 239.0
+                Height: 40.0
+                HorizontalAlignment: Left
+                VerticalAlignment: Top
+                Margin: {Left: 40.0, Top: 38.0}
+                Name: PreviousButton
+                Content: !TextBlock ref!! 4016d2a7-521d-4bb0-9f85-a6b012773e2b
+                PressedImage: !SpriteFromSheet
+                    Sheet: 1be3340c-b797-4557-bff7-d9be92dfdb42:StrideUIDesigns
+                    CurrentFrame: 2
+                NotPressedImage: !SpriteFromSheet
+                    Sheet: 1be3340c-b797-4557-bff7-d9be92dfdb42:StrideUIDesigns
+                    CurrentFrame: 1
+                MouseOverImage: !SpriteFromSheet
+                    Sheet: 1be3340c-b797-4557-bff7-d9be92dfdb42:StrideUIDesigns
+        -   UIElement: !TextBlock
+                Id: c54702ab-e02f-4d41-95ac-4ed024ea5917
+                DependencyProperties: {}
+                BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
+                HorizontalAlignment: Center
+                VerticalAlignment: Center
+                Margin: {}
+                Text: Next Scene
+                Font: c90f3988-0544-4cbe-993f-13af7d9c23c6:StrideDefaultFont
+                TextSize: 20.0
+                TextColor: {R: 240, G: 240, B: 240, A: 255}
+        -   UIElement: !Grid
+                Id: cb785849-4bef-4728-a729-292d88fe0c57
+                DependencyProperties: {}
+                BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
+                Margin: {}
+                Children:
+                    9ec1d611f64b5a976a71b3b6662d3ba1: !Button ref!! 735a8bec-b755-427f-b3b5-266ecd7396eb
+                    1eea20a6340cf7b2228ac12b15a9cfd6: !Button ref!! 2c0594ca-581b-413e-8a43-219c7d87c216
+                    083cac93c4ebae268959213783fe5013: !EditText ref!! 3d5ddb66-039a-4b92-9820-763417fbd32e
+                RowDefinitions: {}
+                ColumnDefinitions: {}
+                LayerDefinitions: {}

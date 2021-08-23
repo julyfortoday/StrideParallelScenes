@@ -1,0 +1,56 @@
+!SceneAsset
+Id: c3c3ddcf-654e-4649-804d-49394eafe2be
+SerializedVersion: {Stride: 3.1.0.1}
+Tags: []
+ChildrenIds: []
+Offset: {X: 0.0, Y: 0.0, Z: 0.0}
+Hierarchy:
+    RootParts:
+        - ref!! 21223d48-cb9e-477c-a792-ea6a1bd996d1
+        - ref!! 4d99960b-c454-4791-94d8-f572727c2126
+    Parts:
+        -   Entity:
+                Id: 21223d48-cb9e-477c-a792-ea6a1bd996d1
+                Name*: HUD
+                Components:
+                    f817ef2570d6743372268508e6c0792b: !TransformComponent
+                        Id: 8088ecb8-5f91-4b4e-897a-dce0e2a50784
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    7f97c803bb9152b95847f5a7f15fb354: !UIComponent
+                        Id: 1d2b4715-2647-429b-8467-d11d2ddfcc9c
+                        Page: 0936e0ab-4586-4223-a959-4b2bb1299931:Page
+                        Resolution: {X: 1280.0, Y: 720.0, Z: 1000.0}
+                        Size: {X: 1.28, Y: 0.72, Z: 1.0}
+                    e5b6f9542ffe8847fcad45ba28e174cc: !ParallelScenes.HUD,ParallelScenes
+                        Id: 73849b54-3928-4812-856b-aaa081e4bc80
+            Base:
+                BasePartAsset: a06c44ba-7853-47bf-85e4-25550fd8cec8:HUD
+                BasePartId: a5b26be5-9233-4e94-bd0e-03fc47044e04
+                InstanceId: 39505b2a-6435-423d-8201-8c23501a7ca4
+        -   Entity:
+                Id: 4d99960b-c454-4791-94d8-f572727c2126
+                Name: Camera
+                Components:
+                    225cc3fde125c2ae102a1c376aedc5eb: !TransformComponent
+                        Id: eecbc891-286c-457e-8cfc-d14535e81671
+                        Position: {X: -9.0, Y: 2.0, Z: 10.0}
+                        Rotation: {X: -0.037775498, Y: -0.49952412, Z: -0.021809693, W: 0.8652011}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    fd436630dc84583e5bd8e1d6c22f4f9b: !CameraComponent
+                        Id: 955c0d48-a936-4b40-bcd6-921108ea1fa2
+                        Name: null
+                        Projection: Perspective
+                        Slot: 5d7771d5-aacd-4873-bd1b-996be64c3622
+                    6923a278d0354cd37075cd4c3795a8fb: !ParallelScenes.BasicCameraController,ParallelScenes
+                        Id: b3d7d292-bcfc-48c1-bf66-9beee42ebdc8
+                        Gamepad: false
+                        KeyboardMovementSpeed: {X: 5.0, Y: 5.0, Z: 5.0}
+                        TouchMovementSpeed: {X: 0.7, Y: 0.7, Z: 0.3}
+                        SpeedFactor: 5.0
+                        KeyboardRotationSpeed: {X: 3.0, Y: 3.0}
+                        MouseRotationSpeed: {X: 1.0, Y: 1.0}
+                        TouchRotationSpeed: {X: 1.0, Y: 0.7}

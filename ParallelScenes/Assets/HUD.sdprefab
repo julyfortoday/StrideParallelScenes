@@ -1,0 +1,25 @@
+!PrefabAsset
+Id: a06c44ba-7853-47bf-85e4-25550fd8cec8
+SerializedVersion: {Stride: 3.1.0.1}
+Tags: []
+Hierarchy:
+    RootParts:
+        - ref!! a5b26be5-9233-4e94-bd0e-03fc47044e04
+    Parts:
+        -   Entity:
+                Id: a5b26be5-9233-4e94-bd0e-03fc47044e04
+                Name: UI
+                Components:
+                    f817ef2570d6743372268508e6c0792b: !TransformComponent
+                        Id: 30a5fa2d-cf8a-44ff-a500-e93ae59b2116
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    7f97c803bb9152b95847f5a7f15fb354: !UIComponent
+                        Id: b8173fd6-6452-4ab3-88ee-ebae61945f32
+                        Page: 0936e0ab-4586-4223-a959-4b2bb1299931:Page
+                        Resolution: {X: 1280.0, Y: 720.0, Z: 1000.0}
+                        Size: {X: 1.28, Y: 0.72, Z: 1.0}
+                    e5b6f9542ffe8847fcad45ba28e174cc: !ParallelScenes.HUD,ParallelScenes
+                        Id: c41ac610-8905-4efc-adc5-c9e92f1fec02
