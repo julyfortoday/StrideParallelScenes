@@ -21,6 +21,9 @@ namespace ParallelScenes
         EventReceiver NextSceneListener = new EventReceiver(HUD.NextSceneEventKey);
         EventReceiver PreviousSceneListener = new EventReceiver(HUD.PreviousSceneEventKey);
 
+        private Entity CameraEntity;
+        private Entity HUDEntity;
+
         public MyGame()
         {
             Log.Info("Starting...");
@@ -38,6 +41,10 @@ namespace ParallelScenes
         {
             SceneGenerator gen = new SceneGenerator(Content);
             SceneSystem.SceneInstance.Name = "main";
+
+            CameraEntity = SceneSystem.SceneInstance.RootScene.Entities.First(e => e.Name == "Camera");
+            HUDEntity = SceneSystem.SceneInstance.RootScene.Entities.First(e => e.Name == "HUD");
+
             instances.Add(new SceneInstance(this.Services, gen.LoadScene("Scene01")) { Name = "Scene01" });
             instances.Add(new SceneInstance(this.Services, gen.LoadScene("Scene02")) { Name = "Scene02" });
 
@@ -119,22 +126,13 @@ namespace ParallelScenes
                 var instance = instances[sceneIndex];
                 Log.Info("going to scene: " + instance.RootScene?.Name);
 
-                // recapture the current scene to prepare for loading a different scene
-                var currentScene = SceneSystem.SceneInstance.RootScene.Children.FirstOrDefault();
-                if (currentScene != null)
-                {
-                    SceneCollection sc = SceneSystem.SceneInstance.RootScene.Children as SceneCollection;
-                    sc.Remove(currentScene);
-                    SceneInstance originalInstance = instances.Where(x => x.Name == currentScene.Name).FirstOrDefault();
-                    originalInstance.RootScene = currentScene;
-                }
+                SceneSystem.SceneInstance.RootScene.Entities.Remove(HUDEntity);
+                SceneSystem.SceneInstance.RootScene.Entities.Remove(CameraEntity);
 
+                SceneSystem.SceneInstance = instance;
 
-                // get the desired scene and put it in place
-                var scene = instance.RootScene;
-                instance.RootScene = null;
-                scene.Parent = null; // trying to null set a scene's parent seemingly doesn't work -- Do i still need/want this?
-                SceneSystem.SceneInstance.RootScene.Children.Add(scene);
+                SceneSystem.SceneInstance.RootScene.Entities.Add(CameraEntity);
+                SceneSystem.SceneInstance.RootScene.Entities.Add(HUDEntity);
             }
             catch (Exception e)
             {
